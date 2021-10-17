@@ -9,6 +9,8 @@ import { RegisterComponent } from './register/register.component';
 import { routing } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './services/user.service.client';
+import { CourseService } from './services/CourseService';
+import { CourseNavigatorComponent } from './course-navigator/course-navigator.component';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { UserService } from './services/user.service.client';
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    CourseNavigatorComponent
   ],
   imports: [
     routing,
@@ -25,7 +28,8 @@ import { UserService } from './services/user.service.client';
     AppRoutingModule
   ],
   providers: [
-    UserService
+    UserService,
+    CourseService
   ],
   bootstrap: [AppComponent]
 })
