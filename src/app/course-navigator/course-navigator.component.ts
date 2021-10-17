@@ -9,10 +9,9 @@ import { CourseService } from '../services/CourseService';
 export class CourseNavigatorComponent implements OnInit {
 
   constructor(private courseService: CourseService) { }
-  courses: any[]|undefined;
+  courses: any[]| undefined;
   ngOnInit(): void {
     this.courseService.findAllCourses()
-    .then(courses => this.courses = courses);
+      .then(courses => this.courses = courses);
   }
-
 }
