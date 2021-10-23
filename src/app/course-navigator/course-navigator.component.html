@@ -1,6 +1,11 @@
-<p>test</p>
 <ul class="list-group">
-    <li *ngFor="let courses of courses" class="list-group-item">
-        {{courses}}
+    <li class="list-group-item active">
+        Courses
+    </li>
+    <li *ngFor="let courses of courses" class="list-group-item" 
+    (click)="selectCourse(course)" [ngClass]="{'active': courses.id == selectedCourse.id}"
+    >
+        {{courses.title}}
     </li>
 </ul>
+{{selectedCourse.modules.length}}
