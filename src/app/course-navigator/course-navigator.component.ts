@@ -9,7 +9,7 @@ import { CourseService } from '../services/CourseService';
 export class CourseNavigatorComponent implements OnInit {
 
   constructor(private courseService: CourseService) { }
-  courses: any[]| undefined;
+  courses: any[] | undefined;
   selectedCourse = {
     modules: [],
     id: undefined
@@ -19,7 +19,7 @@ export class CourseNavigatorComponent implements OnInit {
       .then(courses => this.courses = courses);
   }
 
-  selectCourse(course: any){
-    this.selectCourse = course;
+  selectCourse(course: any): void{
+    this.selectedCourse = course;
   }
 }
